@@ -58,3 +58,33 @@ font-family: "Rubik Scribble", system-ui;
 #startbtn:hover{
     background-color: #151722;
 }
+
+#restartbtn{
+    -webkit-text-stroke-color: rgb(0, 208, 255);
+    -webkit-text-stroke-width: 0.5px;
+}
+
+#restartbtn:hover{
+    background-color: #151722;
+}
+
+#footer{
+    -webkit-text-stroke-color: white;
+    -webkit-text-stroke-width: 0.3px;
+    background-color: #10121f;
+    position: fixed;
+    bottom: 0;
+    line-height: 2.5;
+    font-size: 15px;
+    width: 100%;
+}
+
+#myModal{
+    -webkit-text-stroke-width: 0.7px;
+    -webkit-text-stroke-color: black;
+
+}
+
+.modal-body{
+    font-size: 17px;
+}

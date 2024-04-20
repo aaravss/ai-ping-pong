@@ -18,13 +18,34 @@
     <body>
         <center>
 <header id="header">🏓 AI PING PONG GAME<button data-toggle="modal" data-target="#myModal" id="instr">🕹️ Instructions</button></header>
+<div id="myModal" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button class="close" data-dismiss="modal">&times;</button>
+                <h3>📃 Instructions</h3>
+            </div>
+            <div class="modal-body">
+                <ol>
+                    <li>Press "Play Game".</li>
+                    <li>Allow webcam access.</li>
+                    <li>Move your arm up and down to control the paddle!</li>
+                    <li>Press "Restart" to play again.</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+</div>
 <br><br><br>
 <button onclick="startGame()" id="startbtn" class="coolbtn">🎮 Play Game</button>
+<button onclick="restart()" id="restartbtn" class="coolbtn">🔃 Restart</button>
 <br>
 <button id="status" class="coolbtn">Status: </button>
 <br>
 <div id="canvas"></div>
-        <script src="main.js"></script>
+
+<div id="footer">Developed by Aarav Sanganneria</div>
     </center>
     </body>
+    <script src="main.js"></script>
 </html>
