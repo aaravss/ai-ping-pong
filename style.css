@@ -88,3 +88,11 @@ font-family: "Rubik Scribble", system-ui;
 .modal-body{
     font-size: 17px;
 }
+
+canvas{
+    margin-left: 20px;
+}
+
+video{
+    margin-left: 50px;
+}
