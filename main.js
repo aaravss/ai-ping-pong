@@ -21,6 +21,10 @@ var ball = {
     dy:3
 }
 
+noseX = 0;
+noseY = 0;
+nosescore = 0;
+
 function setup(){
  var canvas =  createCanvas(700,600);
   video = createCapture(VIDEO);
@@ -30,6 +34,18 @@ function setup(){
 
 function modelLoaded(){
   console.log("Model Loaded!");
+  poseNet.on('pose', gotPoses);
+
+}
+
+function gotPoses(results){
+  if(results.length>0){
+    console.log(results);
+    noseX = results[0].pose.nose.x;
+    noseY = results[0].pose.nose.y;
+    nosescore = results[0].pose.nose.confidence;
+    console.log(nosescore);
+  }
 }
 
 function draw(){
