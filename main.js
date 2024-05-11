@@ -25,6 +25,13 @@ noseX = 0;
 noseY = 0;
 nosescore = 0;
 
+game_status = "";
+
+function startGame(){
+  game_status = "start";
+  document.getElementById("status").innerHTML = "Status: loaded";
+}
+
 function setup(){
  var canvas =  createCanvas(700,600);
   video = createCapture(VIDEO);
@@ -49,7 +56,8 @@ function gotPoses(results){
 }
 
 function draw(){
-
+  if(game_status == "start") // inside the if condition check if the game_status is equal to the value "start".
+  {
  background(0); 
 
  fill("black");
@@ -88,7 +96,7 @@ function draw(){
    //function move call which in very important
     move();
 }
-
+}
 
 
 //function reset when ball does notcame in the contact of padde
