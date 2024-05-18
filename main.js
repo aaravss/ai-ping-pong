@@ -37,6 +37,8 @@ function setup(){
   video = createCapture(VIDEO);
   video.size(700,600);
   poseNet = ml5.poseNet(video, modelLoaded);
+  video.hide();
+  canvas.center();
 }
 
 function modelLoaded(){
@@ -51,14 +53,14 @@ function gotPoses(results){
     noseX = results[0].pose.nose.x;
     noseY = results[0].pose.nose.y;
     nosescore = results[0].pose.nose.confidence;
-    console.log(nosescore);
   }
 }
 
 function draw(){
   if(game_status == "start") // inside the if condition check if the game_status is equal to the value "start".
   {
- background(0); 
+
+  image(video, 0, 0, 700, 600);
 
  fill("black");
  stroke("black");
